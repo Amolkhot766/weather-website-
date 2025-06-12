@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main class="weather-container">
+    <h2>About This App</h2>
+    <p>This weather app was built using HTML, CSS, and JavaScript, powered by <a href="https://www.weatherapi.com" target="_blank">WeatherAPI.com</a>.</p>
+    <p>It fetches real-time weather data, includes 3-day forecasts, theme customization, and unit settings.</p>
+    <p>Created by Amol Khot.</p>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+  </script>
+</body>
+</html>
